@@ -6,20 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IP Adresse</title>
     <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
 </head>
 <body>
-    <input type="text" id="ipadress">
-    <input type="text" id="subnetMask">
-    <button type="submit">Calculer</button>
+    <div id="container" class="">
+        <label for="subnetmask">
+            Adresse IP V4:
+            <br>
+            <input type="text" id="ipadress" value="192.168.12.85">
+        </label>
+        
+        <label for="subnetmask">
+            Masque réseaux:
+            <br>
+            <input type="text" id="subnetmask" placeholder="255.255.255.0">
+        </label>
+        <button type="submit" class="calc">
+            <span class="material-symbols-outlined">calculate</span>
+            Calculer
+        </button>
+    </div>
     <div id="results">
-        <p id="ipadress"></p>
-        <p id="subnetmask"></p>
-        <p id="netadress"></p>
-        <p id="firstnetadress"></p>
-        <p id="secondnetadress"></p>
-        <p id="broadcast"></p>
-        <p id="cird"></p>
-        <p id="class"></p>
+        <p style="text-align: start;width: 90%;">Résultats:</p>
+        <button class="close">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+        <p id="ipadress">Adresse IP:</p>
+        <p id="subnetmask">Masque sous réseaux:</p>
+        <p id="netadress">Adresse Réseaux:</p>
+        <p id="firstnetadress">Première Adresse IP du réseaux:</p>
+        <p id="secondnetadress">Dernière Adress IP du réseaux:</p>
+        <p id="broadcast">Adress de diffusion:</p>
+        <p id="cird">CIRD:</p>
+        <p id="class">Classe: </p>
     </div>
     <script src="./index.js"></script>
 </body>
